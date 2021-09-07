@@ -5,15 +5,18 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 
 import noteRoutes from './routes/notes.js';
+import userRouter from './routes/user.js';
 
 dotenv.config();
 const app = express();
+app.use(cors());
 
 app.use(bodyParser.json({ limit: '30mb', extended: true }))
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
-app.use(cors());
 
+// where apis records are stored, 2nd arg under routes folder
 app.use('/notes', noteRoutes);
+app.use('/user', userRouter);
 
 const CONNECTION_URL = process.env.MONGO_DB_URI;
 const PORT = process.env.PORT|| 5000;

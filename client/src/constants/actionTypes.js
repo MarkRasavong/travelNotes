@@ -1,2 +1,9 @@
 export const CREATE = 'CREATE';
 export const FETCH_ALL = 'FETCH_ALL';
+export const DELETE_NOTE = 'DELETE_NOTE';
+export const FETCH_NOTE = 'FETCH_NOTE';
+export const EDIT_NOTE = 'EDIT_NOTE';
+export const AUTH = 'AUTH';
+export const LOGOUT = 'LOGOUT';
+export const UPDATE_NOTE = 'UPDATE_NOTE';
+export const LIKE_POST = 'LIKE_POST';
