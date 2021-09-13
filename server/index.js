@@ -4,7 +4,7 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
 
-import noteRoutes from './routes/notes.js';
+import postRoutes from './routes/posts.js';
 import userRouter from './routes/user.js';
 
 dotenv.config();
@@ -15,7 +15,7 @@ app.use(bodyParser.json({ limit: '30mb', extended: true }))
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
 
 // where apis records are stored, 2nd arg under routes folder
-app.use('/notes', noteRoutes);
+app.use('/posts', postRoutes);
 app.use('/user', userRouter);
 
 const CONNECTION_URL = process.env.MONGO_DB_URI;

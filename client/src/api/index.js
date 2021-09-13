@@ -17,12 +17,14 @@ API.interceptors.request.use((req) => {
 
 //sends to backend --> look server/index.js --app.use..
 
-export const createNote = newNote => API.post('/notes', newNote);
-export const fetchNotes = () => API.get('/notes');
-export const deleteNote = (id) => API.delete(`/notes/${id}`);
-export const updateNote = (id, editedNote) => API.patch(`/notes/${id}`, editedNote)
-export const likePost = (id) => API.patch(`/notes/${id}/likePost`);
+export const fetchPost = (id) => API.get(`/posts/${id}`);
+export const fetchPosts = (page) => API.get(`/posts?page=${page}`);
+export const fetchPostsBySearch = (searchQuery) => API.get(`/posts/search?searchQuery=${searchQuery.search || 'none'}&tags=${searchQuery.tags}`);
+export const createPost = (newPost) => API.post('/posts', newPost);
+export const likePost = (id) => API.patch(`/posts/${id}/likePost`);
+export const updatePost = (id, updatedPost) => API.patch(`/posts/${id}`, updatedPost);
+export const comment = (value, id) => API.post(`/posts/${id}/commentPost`, { value });
+export const deletePost = (id) => API.delete(`/posts/${id}`);
 
-
-export const signIn = formData => API.post('/user/signin', formData);
-export const signUp = formData => API.post('/user/signup', formData);
+export const signIn = (formData) => API.post('/user/signin', formData);
+export const signUp = (formData) => API.post('/user/signup', formData);

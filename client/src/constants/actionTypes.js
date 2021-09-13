@@ -1,9 +1,13 @@
 export const CREATE = 'CREATE';
+export const UPDATE = 'UPDATE';
+export const DELETE = 'DELETE';
 export const FETCH_ALL = 'FETCH_ALL';
-export const DELETE_NOTE = 'DELETE_NOTE';
-export const FETCH_NOTE = 'FETCH_NOTE';
-export const EDIT_NOTE = 'EDIT_NOTE';
+export const FETCH_BY_SEARCH = 'FETCH_BY_SEARCH';
+export const FETCH_POST = 'FETCH_POST';
+export const LIKE = 'LIKE';
+export const END_LOADING = 'END_LOADING';
+export const START_LOADING = 'START_LOADING';
+export const COMMENT = 'COMMENT';
+
 export const AUTH = 'AUTH';
 export const LOGOUT = 'LOGOUT';
-export const UPDATE_NOTE = 'UPDATE_NOTE';
-export const LIKE_POST = 'LIKE_POST';

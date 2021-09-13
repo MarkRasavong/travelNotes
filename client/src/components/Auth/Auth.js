@@ -90,7 +90,7 @@ const Auth = () => {
             onFailure={renderGoogleFailure}
             cookiePolicy="single_host_origin"
           />
-                    <Grid container justify="flex-end">
+                    <Grid container justifyContent="flex-end">
                         <Grid item>
                             <Button onClick={switchMode}>
                                 { isSignedUp ? 'Already have an account? Sign in' : "Don't have an account? Sign Up!" }
@@ -133,8 +133,8 @@ FRONT:
 9. Check everytime the the browser's location move or a dispatch has in called.
 MIDDLEWARE:
 10. In our backend, we need to be able for a logged in User to CRUD when they navigate. 
-11. apply auth middleware onto our routing (routes/notes.js).
+11. apply auth middleware onto our routing (routes/posts.js).
 MIDDLEWARE AUTHORIZATION :
-12. FRONT: found under Notes/Note/Note.js checks if the current User is identified to a specific Note then they can render actions like delete/edit. Like is available for anyone that is logged in and tracked
+12. FRONT: found under Posts/Post/Post.js checks if the current User is identified to a specific Post then they can render actions like delete/edit. Like is available for anyone that is logged in and tracked
 by if a user clicks it will like or unlike.
 */
