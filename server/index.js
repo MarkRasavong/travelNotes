@@ -18,6 +18,10 @@ app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
 app.use('/posts', postRoutes);
 app.use('/user', userRouter);
 
+app.get('/', (req, res) => {
+  res.send('APP IS RUNNING');
+});
+
 const CONNECTION_URL = process.env.MONGO_DB_URI;
 const PORT = process.env.PORT|| 5000;
 
