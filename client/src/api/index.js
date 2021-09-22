@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-const API = axios.create({ baseURL: 'http://localhost:5000'});
+const API = axios.create({ baseURL: 'https://travelnotes-mern.herokuapp.com/'});
 
 //intercept HTTP requests, enables you to add listeners for various stages of making an HTTP request. front/backend authorization in every request.
 API.interceptors.request.use((req) => {
